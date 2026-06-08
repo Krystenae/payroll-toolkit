@@ -17,3 +17,23 @@ let employees = [
         hoursWorked: 50
     }
 ];
+// Base Pay Function
+
+function calculateBasePay(rate, hours) {
+    return rate * Math.min(hours, 40);
+}
+
+// Overtime Function
+
+function calculateOvertimePay(rate, hours) {
+    if (hours > 40) {
+        return (hours - 40) * rate * 1.5;
+    }
+    return 0;
+}
+
+// Tax Function
+
+function calculateTaxes(grossPay) {
+    return grossPay * 0.15;
+}
